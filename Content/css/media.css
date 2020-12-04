@@ -1,0 +1,148 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-bar {
+    right: 44px;
+    top: 3px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+  }
+  .main-bar div {
+    width: 35px;
+    height: 4px;
+    margin: 6px 0;
+    background-image: linear-gradient(45deg, #ffffff, #faf9fc);
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+  }
+  .activefile {
+    top: 6px;
+  }
+  .activefile .a {
+    -webkit-transform: rotateZ(43deg);
+    transform: rotateZ(43deg);
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+  .activefile .b {
+    display: none;
+  }
+  .activefile .c {
+    -webkit-transform: rotateZ(-46deg);
+    transform: rotateZ(-46deg);
+    top: 0px;
+    position: absolute;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+    margin: 6px 0 0 0px;
+  }
+  .col-right {
+    width: 100% !important;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 52px;
+    overflow-x: hidden;
+    display: none;
+    left: 0px;
+    background: #0b293a;
+    text-align: center;
+    border-bottom: 3px solid #76d3f926;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .col-right ul {
+    display: block !important;
+  }
+  .col-right ul li {
+    display: block;
+    margin: 1rem 0;
+  }
+  .banner_content {
+    -webkit-transform: translateY(8rem) !important;
+            transform: translateY(8rem) !important;
+  }
+  .banner_cont1 h1 {
+    font-size: 1.5rem;
+  }
+  .banner_cont1 p {
+    font-size: 15px;
+  }
+  .Unorder1 {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .Unorder1 li {
+    width: 47% !important;
+  }
+  .Insta_font_wrp .Insta_content .Fst01 h2 {
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+  .Insta_font_wrp .Insta_content .frst_cmn01 p {
+    font-size: 1rem;
+    padding: .3rem 0;
+  }
+  .Insta_font_wrp .Insta_content .frst_cmn01 h2 {
+    font-size: 1.5rem;
+    padding: .8rem 0;
+  }
+  .banner_cont1 h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Unorder1 {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .Unorder1 li {
+    width: 100% !important;
+  }
+  footer .Footer_content {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    padding: 3rem 0 0.5rem !important;
+    text-align: center;
+  }
+  .Ftr_cmn01 h2 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+  .Ftr_cmn01 h2:before {
+    height: 1px !important;
+    bottom: -17px !important;
+    width: 28% !important;
+    left: 36% !important;
+  }
+  .font_desing .Font_wrp a {
+    font-size: 14px;
+  }
+  .Design_font a {
+    padding: .8rem 1rem;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .Insta_font_wrp .Insta_content {
+    width: 100%;
+    margin: 0 auto .6rem;
+  }
+  .Font_table_wrp {
+    padding: 1rem 0 1rem !important;
+  }
+  .banner_content {
+    -webkit-transform: translateY(9rem) !important;
+            transform: translateY(9rem) !important;
+  }
+  .banner_cont1 h1 {
+    font-size: 1.5rem !important;
+  }
+}
+/*# sourceMappingURL=media.css.map */

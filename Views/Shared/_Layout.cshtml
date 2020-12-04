@@ -1,42 +1,118 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>InstaFont</title>
+    @*<link rel="stylesheet" href="~/Content/bootstrap.min.css">*@
+    @*<link rel="stylesheet" href="/Content/bootstrap.min.css">*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/fonts/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <link rel="stylesheet" href="~/Content/css/fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="~/Content/css/aos.css">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <main class="wow fadeIn  animated" style="visibility: hidden; animation-name: none;">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @RenderBody()
+        <!-- footer -->
+        <footer class="wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container">
+                <div class="Footer_content row">
+                    <div class="Ft_cnt2 Ftr_cmn01 col-12 col-sm-6 col-md-4"
+                         data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <div class="Ft_heading">
+                            <h2>quick Links</h2>
+                        </div>
+                        <div class="FT_contnt">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li> <a href="#">Contact</a></li>
+                                <li><a href="#">Casino game Rules</a></li>
+                                <li><a href="#">Term & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Ft_cnt3 Ftr_cmn01 col-12 col-sm-6 col-md-4">
+                        <div class="Ft_heading">
+                            <h2>contact Us</h2>
+                        </div>
+                        <div class="FT_contnt">
+                            <ul>
+                                <li><a href="#">Responsible gaming</a></li>
+                                <li><a href="#">privacy & Security</a></li>
+                                <li> <a href="#">Contact</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">History of Casino Games</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Ft_cnt4 Ftr_cmn01 col-12 col-sm-6 col-md-4"
+                         data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <div class="Ft_heading">
+                            <h2>Social</h2>
+                        </div>
+                        <div class="FT_contnt">
+                            <ul class="Unord_First">
+                                <li>
+                                    <a href="#" class="social-icon Sl_01">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-icon Sl_02">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-icon Sl_03">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-icon Sl_04">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="Unord_second">
+                                <li><a href="mailto:"><i class="fas fa-envelope"></i>Insta@InstaFont.com.au</a></li>
+                                <li><a href="#:"><i class="fas fa-phone-alt"></i> +61 7220 4747</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright section -->
+            <div class="copyright_wrapper">
+                <div class="container">
+                    <div class="Copyright_content">
+                        <p>
+                            <span>2020 instaFont.com © All Rights Reserved</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+        <!-- script---section -->
+
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/js/main.js"></script>
+        <script src="~/Scripts/js/wow.min.js"></script>
+        <script src="~/Scripts/js/aos.js"></script>
+
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 </html>

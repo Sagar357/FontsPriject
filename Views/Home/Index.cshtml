@@ -2,30 +2,166 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+
+        <header class="my-4">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <h2>Insta<span>Font</span></h2>
+                    </div>
+                    <div class="nav-item col-right" id="myHeader">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">service</a></li>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="main-bar">
+                    <div class="a"></div>
+                    <div class="b"></div>
+                    <div class="c"></div>
+                </div>
+                <!-- <div class="Heading_wrp row">
+                  <div class="Inpt">
+                     <input class="pb-5 px-2 text-secondary col-12 bg-white" type="text" name="text" id="txt" placeholder="type or paste some text here">
+                  </div>
+                </div> -->
+            </div>
+        </header>
+        <!-- banner -->
+        <section class="banner">
+            <div class="container">
+                <div class="banner_content row">
+                    <div class="banner_cont1 bnr_commmn col-12 col-sm-12 col-md-6"
+                         data-aos="zoom-in" data-aos-delay="50" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                        <h1 class="line-1 anim-typewriter">
+                            Find your Font better  and faster
+                        </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <div class="search">
+                            <input type="text" name="font" placeholder="search your font here...">
+                            <div class="search-item" onclick="searchFn()">
+                                <svg width="25px" height="25px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd">
+                                    <path class="rui-77aaa" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- table -->
+        <section class="Font_table_wrp wow fadeIn  animated" style="visibility: hidden; animation-name: none;" id="Font_table">
+            <div class="container-fluid">
+                <div class="Font_table">
+                    <ul class="row d-flex justify-space-between Unorder1">
+                        <li class=" py-3 CopyContent" id="CopyContent">
+                            1
+                            <i class="fas fa-copy" title="Copy Text" onclick="copyFn()"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            2
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            3
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            4
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            5
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            6
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            7
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            8
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                        <li class=" py-3">
+                            9
+                            <i class="fas fa-copy" title="Copy Text"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- end--here -->
+        <!-- content -->
+        <section class="font_desing">
+            <div class="side_animation">
+                <div class="mid_anime">
+                </div>
+            </div>
+            <div class="container row">
+                <div class="Font_wrp bg-white text-center py-1 mb-3">
+                    <h5>Need more fonts?</h5>
+                    <a href="#">Design Your Own Fancy Fonts</a>
+                </div>
+            </div>
+        </section>
+        <!-- Instagram--fonts -->
+        <section class="Insta_font_wrp position-relative wow fadeIn  animated" style="visibility: hidden; animation-name: none;">
+            <div class="container">
+                <div class="Insta_content d-flex .flex-wrap row">
+                    <div class="Fst01 frst_cmn01">
+                        <div class="F_part0 Fpart_cmn">
+                            <h2 class="py-1">Instagram Fonts</h2>
+                            <p>Welcome to <b> InstaFonts.io! </b>We have over 90 bio fonts for you to make your bio all fancy like. You can copy and paste these text fonts and use them not just in your Instagram bio, but all over the internet! They're particularly useful on social media sites that don't allow you to format your text (e.g. bold, italics, underline, etc.). Using some bold text to, for example, punctuate important points in your post could help you draw readers attention to the important parts (<a href="#"> skimming </a>is the new "reading" in the internet age). Stylish text fonts like those of this website are also handy to just draw peoples' attention to your post/tweet/etc. in the first place. Insta Fonts was primarily designed to bring you fonts for your Instagram bio, but we hope you'll find it useful for other purposes too!</p>
+                        </div>
+                    </div>
+                    <div class="Fst02 frst_cmn01">
+                        <div class="F_part0 Fpart_cmn">
+                            <h2 class="py-1">How does this work?</h2>
+                            <p>Here's the short explanation: Your keyboard is hiding characters from you. Your keyboard has only about 100 characters on it, but that's just because it can't fit any more. There are actually <b>tens of thousands </b> of characters! No joke. There were originally 128 characters (read about <a href="#"> ASCII</a>), but then Unicode was introduced and that supports an unlimited number of characters. Each year the Unicode standard grows to incorperate more characters - and emojis! That's right, emojis are actually just textual characters! It would be perfectly plausible to have a keyboard that had keys which were for emojis.</p>
+                        </div>
+                    </div>
+                    <div class="Fst03 frst_cmn01">
+                        <div class="F_part0 Fpart_cmn">
+                            <h2>Are they actually "fonts"?</h2>
+                            <p>Well, not really. A font (or really, a <a href="#">"Typeface"</a> ) is something that gets applied to regular characters like the ones you're reading right now. The font "transforms" the "style" of the characters, but doesn't change the actual characters at all. That's why you can't simply copy and paste the text you're reading right now into a social media website and expect the font to be "transferred" along with the characters. However, if you copy 𝖙𝖍𝖎𝖘 𝖙𝖊𝖝𝖙 then it will actually copy the "style" that those characters appear to have. That's because, as explained previously, those fancy character are actually separate characters rather than being the same characters with a particular "style" applied. The characters "e" and "𝖊" are as different as "S" and "5". They may appear similar, but they're completely different characters.</p>
+                        </div>
+
+                    </div>
+                    <div class="Fst04 frst_cmn01">
+                        <div class="F_part0 Fpart_cmn">
+                            <h2>Which fonts will work in by bio?</h2>
+                            <p>Instagram has blocked certain characters from appearing in bios, and so you may find that some of these fonts don't work properly on Instagram. It's hard to keep track of which fonts are working and which ones aren't at any particular time, so we've included all of our fancy fonts and you can easily test them by just attempting to put them in your bio and seeing if it works. The same goes for if you're using these fancy fonts on Twitter, or Tumblr, or Amino, or Discord, or absolutely anywhere else. Whether or not a font works will simply depend on whether the developers of the platform have decided to ban the characters of the font.</p>
+                        </div>
+                    </div>
+                    <div class="Fst05 frst_cmn01">
+                        <div class="F_part0 Fpart_cmn">
+                            <h2>Can I use these fonts on other social networks?</h2>
+                            <p>Yes! You can use them on Twitter, Facebook, Tumblr, Reddit, Amino, Discord, Spectrum, WhatsApp, WeChat, YouTube, QQ, SnapChat, Skype, VKontakte (VK), Pinterest, Taringa, and more! Basically, anywhere that you can publish text, there's a decent change that you can use these stylish text fonts to spruce up your posts. This site is called Insta Fonts simply because Instagram is one of the most widely used social media platforms. As I've noted above, some sites disallow certain Unicode characters, and so not all of these Unicode fonts will work on all sites.</p>
+                        </div>
+
+                    </div>
+                    <div class="Fst06 frst_cmn01 col-sm-12 col-md-12">
+                        <h2>Feedback</h2>
+                        <p>Got some feedback for the team? You can share it with us <a href="#"> here.</a> We'll do our best to incorperate your suggestions into the website on the next update. Thanks for visiting Insta Fonts!</p>
+
+                    </div>
+                </div>
+                <div class="Design_font" onclick="topFunction()">
+                    <a href="#" type="button" role="button"> Design Your Own Font</a>
+                </div>
+            </div>
+        </section>
+   
+
+
+   
