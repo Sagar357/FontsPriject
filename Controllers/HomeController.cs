@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontsPriject.Models;
+using FontsPriject.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +10,31 @@ namespace FontsPriject.Controllers
 {
     public class HomeController : Controller
     {
+        FontService service = new FontService();
+
         public ActionResult Index()
         {
-            return View();
+            return View("Index", null);
         }
-
-        public ActionResult About()
+        public ActionResult GetFonts(string text)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            Font_List fontList = service.getFontList();
+            fontList.text = text;
+            return View("Index" ,fontList);
         }
 
-        public ActionResult Contact()
+        //public ActionResult GetFontSize(string text)
+        //{
+        //    Font_Size fontSize = service.getFontSize();
+        //    fontSize.text = text;
+        //    return View(fontSize);
+        //}
+
+        public ActionResult CustomFonts()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View("HomePage");
         }
     }
 }
