@@ -70,83 +70,11 @@
 <section class="Font_table_wrp wow fadeIn  animated" style="visibility: hidden; animation-name: none;" id="Font_table">
     <div class="container-fluid">
         <div class="Font_table">
-            <ul class="row d-flex justify-space-between Unorder1">
-                @foreach (var element in fontList)
-                {
-                    <li class=" py-3 CopyContent" id="CopyContent" style="font-family:@element.fontFamily">
-
-                        <span class="text-span">
-                            @*<input value="@Model.text" id="text-@element.fontId" />*@
-                            <textarea>
-                                 @Model.text
-                            </textarea>
-                           
-                        </span>
-                        <span class="copy" onclick="copyToClipboard(event)">
-                            <i class="fas fa-copy clipboard" title="Copy Text" data-clipboard-target="#text-@element.fontId" ></i>
-                            @*<button class="clipboard" data-clipboard-target="#text-@element.fontId">Click to copy</button>*@
-                        </span>
-                      
-                    </li>
-                }
-                @if (Model != null)
-                {
-            <li class=" py-3 CopyContent" id="CopyContent">
-                <span class="text-span">
-                    ♟☠
-                    @Model.text
-                </span>
-                    <i class="fas fa-copy" title="Copy Text" onclick="copyFn()"></i>
-                
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    🐼
-                    @Model.text
-                </span>
-                    <i class="fas fa-copy" title="Copy Text"></i>
-                    
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    😎 🌷
-                    @Model.text
-                </span>
-                    <i class="fas fa-copy" title="Copy Text"></i>
+            <ul class="row d-flex justify-space-between Unorder1 outList">
               
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    🌷🍔
-                    @Model.text
-                </span>
-                    <i class="fas fa-copy" title="Copy Text"></i>
-                   
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    🐺 💲🐼
-                    @Model.text
-                </span>
-
-                    <i class="fas fa-copy" title="Copy Text"></i>
-             
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    🐺💣🐼
-                    @Model.text
-                    </span>
-                    <i class="fas fa-copy" title="Copy Text"></i>
-            </li>
-            <li class=" py-3 CopyContent">
-                <span class="text-span">
-                    😎 🌷🍔
-                    @Model.text
-                    </span>
-                    <i class="fas fa-copy" title="Copy Text"></i>
-            </li>
-                }
+           
+          
+                
                 @*<li class=" py-3 CopyContent" id="CopyContent">
                         1
                         <i class="fas fa-copy" title="Copy Text" onclick="copyFn()"></i>

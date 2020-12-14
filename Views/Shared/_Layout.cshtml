@@ -1230,10 +1230,13 @@
             //new ClipboardJS('.copy');
 
             $('#text1').change(function () {
-              
+
+                var html=``;
                 var text = $('#text1').val();
-                var dtext = text;
-              debugger
+                for (j = 0; j < 50; j++)
+                {
+                        var dtext = text;
+              
               for (var i = 0; i < text.length; i++) {
                   var marker = text.charAt(i);
                   if (marker != " ") {
@@ -1241,15 +1244,93 @@
                       var rno = randomNumber(replace.length);
                       dtext = dtext.replace(marker, replace[rno]);
                   }
+
            
-              }
+                }
+                html=html+listElements(dtext);
+                }
+                debugger
+                $('.outList').empty();
+              $('.outList').append(html);
+
+        });
+
+        });
+
+        function listElements(dtext)
+        {
+            
+                var html = ``;
+            html = html + ` 
+                    <li class=" py-3 CopyContent" id="CopyContent">
+                <span class="text-span">
+                    ♟☠`
+                    + dtext +
+                    `
+               
+                </span>
+                <li class=" py-3 CopyContent" id="CopyContent">
+                <span class="text-span">
+                    ` + dtext +`♟☠
+               
+                </span>
+                    <i class="fas fa-copy" title="Copy Text" onclick="copyFn()"></i>
                 
-              debugger
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    🐼` + dtext +`
+              
+                </span>
+                    <i class="fas fa-copy" title="Copy Text"></i>
+                    
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    😎 ` + dtext +`🌷
+               
+                </span>
+                    <i class="fas fa-copy" title="Copy Text"></i>
+              
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    🌷🍔` + dtext +`
+              
+                </span>
+                    <i class="fas fa-copy" title="Copy Text"></i>
+                   
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    🐺` + dtext +` 💲🐼
+                 
+                </span>
 
-            location.href = '@Url.Action("GetFonts", "Home")?text='+text;
-        });
-
-        });
+                    <i class="fas fa-copy" title="Copy Text"></i>
+             
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    🐺💣` + dtext +`🐼
+                 
+                    </span>
+                    <i class="fas fa-copy" title="Copy Text"></i>
+            </li>
+            <li class=" py-3 CopyContent">
+                <span class="text-span">
+                    😎 ` + dtext +`🌷🍔
+                
+                    </span>
+                    <i class="fas fa-copy" title="Copy Text"></i>
+            </li>
+                
+            </li>`;
+                
+            debugger
+            return html;
+              
+        }
 
         function randomNumber(length) {
             var x = Math.floor((Math.random() * length));
