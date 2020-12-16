@@ -25,6 +25,7 @@ jQuery('.main-bar').click(function(e) {
     jQuery('#myHeader').slideToggle();
 });
 
+
 // search--click
 //function searchFn() {
 //    var Font = document.getElementById("Font_table");

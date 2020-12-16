@@ -1795,6 +1795,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\stylesheet.css" />
     <Content Include="Global.asax" />
+    <Content Include="image\favicon.svg" />
+    <Content Include="image\favicon3.svg" />
+    <Content Include="image\logo2.png" />
+    <Content Include="image\logo3.png" />
     <Content Include="Models\Site.css" />
     <Content Include="image\BANNER.png" />
     <Content Include="image\banner01.png" />

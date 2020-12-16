@@ -70,10 +70,16 @@ header nav .logo h2 {
   font-weight: bold;
   font-family: 'Choplin Medium';
 }
-
-header nav .logo h2 span {
-  color: #ff9800 !important;
+header nav .logo a{
+    text-decoration:none;
 }
+    header nav .logo a img{
+        max-width:46%;
+        
+    }
+    header nav .logo h2 span {
+        color: #ff9800 !important;
+    }
 
 header nav .nav-item {
   width: 70%;
@@ -155,10 +161,11 @@ header nav .nav-item ul li a {
   font-family: 'Open Sans',sans-serif;
 }
 
-.banner .banner_content .banner_cont1 p {
-  color: #ffffff;
-  padding: 1rem 0;
-}
+    .banner .banner_content .banner_cont1 p {
+        color: #ffffff;
+        padding: .6rem 0;
+        line-height: 1.7;
+    }
 
 .banner .banner_content .search {
   width: 100%;
@@ -360,12 +367,20 @@ header nav .nav-item ul li a {
   font-weight: bold;
   padding: 1rem 0;
 }
+    .Insta_font_wrp .Insta_content .Fst06 ul {
+        padding-left: 2.2rem;
+    }
+        .Insta_font_wrp .Insta_content .Fst06 ul li {
+            padding: 0 0 .5rem;
+            line-height: 1.5;
+            color: #000000;
+        }
 
 .Insta_font_wrp .Insta_content .frst_cmn01 p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding: .6rem 0;
-  color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: .6rem 0;
+    color: #000000;
 }
 
 .Insta_font_wrp .Insta_content .frst_cmn01 p b {
@@ -756,7 +771,7 @@ footer .copyright_wrapper .Copyright_content p span {
     width: 0;
   }
   to {
-    width: 17em;
+    width: 18em;
   }
 }
 
@@ -765,7 +780,7 @@ footer .copyright_wrapper .Copyright_content p span {
     width: 0;
   }
   to {
-    width: 17em;
+    width: 18em;
   }
 }
 
@@ -792,6 +807,10 @@ footer .copyright_wrapper .Copyright_content p span {
     width: 90%;
     margin: 0 auto;
   }
+    header nav .logo a img {
+        max-width: 74%;
+        padding: 14px 0 0;
+    }
   .main-bar {
     right: 44px;
     top: 3px;
@@ -799,6 +818,7 @@ footer .copyright_wrapper .Copyright_content p span {
     cursor: pointer;
     position: absolute;
   }
+
   .main-bar div {
     width: 35px;
     height: 4px;
@@ -936,6 +956,22 @@ footer .copyright_wrapper .Copyright_content p span {
 }
 /*custom fonts*/
 
+.CopyContent .fa-copy, #Font_check {
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+    cursor: pointer;
+    transition: all .3s ease-in-out
+}
+    .CopyContent .fa-copy:hover {
+        opacity: .77;
+        transition: all .3s ease-in-out
+    }
+#Font_check{
+    color:green;
+    display:none;
+}
+.Font_check{
 
-
+}
 /*# sourceMappingURL=style.css.map */
