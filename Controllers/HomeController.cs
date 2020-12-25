@@ -36,5 +36,31 @@ namespace FontsPriject.Controllers
 
             return View("HomePage");
         }
+        public ActionResult About()
+        {
+            return View("About");
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult Disclaimer()
+        {
+            return View();
+        }
+
+        public ActionResult PrivacyPolicy()
+        {
+            return View();
+        }
+
+        public ActionResult TermCondition()
+        {
+            return View();
+        }
     }
+    
+
+
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" (A fancy cool ✅ Text generator that helps create stylish text font styles with beautiful symbols and fancy characters for social networks & any other places. Fancy Text Generator Make 𝐔𝐧𝐢𝐪𝐮𝐞 & 𝔽𝕒𝕟𝕔𝕪 font style including roman, greek, cursive letters & many other fancy fonts.)" />
-
+    <meta name="robots" content="index, follow" />
+    <meta name="Keywords" content="Fancy Text, Fancy Fonts, Fancy Text Generator, Stylish Text, Cool Text" />
     <title>Fancy Text Generator & Font Changer 😎 Cool Font Generator</title>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css">
     <link rel="stylesheet" href="/Content/bootstrap.min.css">
@@ -15,7 +16,8 @@
     <link rel="stylesheet" href="~/fonts/stylesheet.css">
     <link rel="stylesheet" href="~/Content/css/animate.css">
     <link rel="stylesheet" href="~/Content/css/fontawesome-free-5.15.1-web/css/all.css">
-    <link rel="stylesheet" href="~/Content/css/aos.css">
+    <link rel="stylesheet" href="~/Content/css/aos.css"> 
+    <link rel="canonical" href="https://fancytextgenerator.io/" />
     <link href='https://fonts.googleapis.com/css?family=Engagement' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Dr Sugiyama' rel='stylesheet'>
@@ -48,10 +50,10 @@
 </head>
 <body>
     @*<input id="copyinput" >*@
-   @* <input id="copyinput1">*@
-   @* <input id="copyinput2">*@
-   @* <input id="copyinput3">*@
-   @* <input id="copyinput4">*@
+    @* <input id="copyinput1">*@
+    @* <input id="copyinput2">*@
+    @* <input id="copyinput3">*@
+    @* <input id="copyinput4">*@
     <main class="wow fadeIn  animated" style="visibility: hidden; animation-name: none;">
 
         @RenderBody()
@@ -265,6 +267,11 @@
             "‟": ['"', "ʺ", "ᐦ", "‟", "̎", "̏", "‶", "῝"]
         };
 
+        //  function myfunction() {
+        //    var x = document.getElementById("text1");
+
+        // }
+
         $(document).ready(function () {
 
             let listItem = ``;
@@ -291,7 +298,7 @@
 
                 + listItem1 +
                 `<button onclick="customdeleting(event)" class="grid_btn01" >delete font</button>
-                        </ul>`;
+                            </ul>`;
             $('.list_container').append(html);
 
 
@@ -303,7 +310,7 @@
             var html = `<ul value="C">`
                 + listItem2 +
                 `<button onclick="customdeleting(event)" class="grid_btn01">delete font</button>
-                         </ul>`;
+                             </ul>`;
             $('.list_container').append(html);
 
 
@@ -1227,93 +1234,111 @@
 
 
             $('li').click(function (event) {
-
+       
                 var json = {};
                 json.in = event.currentTarget.parentElement.attributes.value.value;
                 json.out = event.currentTarget.innerText;
-                rules[rules.length] = json;
+                var arr = a[json.in];
+                var index = arr.indexOf(json.out);
+                for (var prop in a) {
+                    var jaux = {};
+                    debugger
+                    jaux.in = prop;
+                    jaux.out = a[prop][index]
+                    console.log(a[prop].length - index);
+                    rules[rules.length] = jaux;
+                }
+               
                 console.log(rules)
             });
 
             //new ClipboardJS('.copy');
-
-            $('#text1').change(function () {
-
-                var html = ``;
-                var text = $('#text1').val();
-                for (j = 0; j < 50; j++) {
-                    var dtext = text;
-
-                    for (var i = 0; i < text.length - 1; i++) {
-                        var marker = text.charAt(i);
-                        if (marker != " ") {
-                            var replace = a[marker];
-                            var rno = randomNumber(replace.length);
-                            dtext = dtext.replace(marker, replace[rno]);
-                        }
-
-
-                    }
-                    html = html + listElements(dtext);
-                }
-
-                $('.outList').empty();
-                $('.outList').append(html);
-
-            });
-
         });
 
+        function myfunction() {
+            debugger
+            var text = document.getElementById("text1").value;
+            if (text === "" || text === undefined) {
+                $('.outList').empty();
+            }
+            // }
+
+            $('.outList').empty();
+            //$('#text1').change(function () {
+
+            var html = ``;
+            //    var text = $('#text1').val();
+            for (j = 0; j < 50; j++) {
+                var dtext = text;
+
+                for (var i = 0; i < text.length - 1; i++) {
+                    var marker = text.charAt(i);
+                    if (marker != " ") {
+                        var replace = a[marker];
+                        var rno = randomNumber(replace.length);
+                        dtext = dtext.replace(marker, replace[rno]);
+                    }
+
+
+                }
+                if (text != "" && text != undefined) {
+                    html = html + listElements(dtext);
+                }
+            }
+
+
+            $('.outList').append(html);
+        }
 
         function listElements(dtext) {
 
             var html = ``;
             html = html + `
-                            <li class=" py-3 CopyContent" id="CopyContent">
+                                <li class=" py-3 CopyContent" id="CopyContent">
 
-                       <span class="text-span">
-                         ♟☠`
+                           <span class="text-span">
+                             ♟☠`
                 + dtext +
                 `
 
-                       </span>
-                       <i class="fas fa-copy" title="Copy Text" onclick="copyFn0(event)"></i>
-                       <li class=" py-3 CopyContent"id="CopyContent">
-                       <span class="text-span">
-                           ♟☠` + dtext + `
+                           </span>
+                           <i class="fas fa-copy" title="Copy Text" onclick="copyFn0(event)"></i>
+                           <li class=" py-3 CopyContent"id="CopyContent">
+                           <span class="text-span">
+                               ♟☠` + dtext + `
 
-                        </span>
+                            </span>
 
-                          <i class="fas fa-copy" title="Copy Text" id="cpyFont" onclick="copyFn(event)"></i>
-                        <i class="fas fa-check" id="Font_check"></i>
-                    </li>
-                    <li class=" py-3 CopyContent">
-                        <span class="text-span">
-                            🐼` + dtext + `
-
-                        </span>
-                           <i class="fas fa-copy" title="Copy Text" onclick="copyFn1(event)"></i>
+                              <i class="fas fa-copy" title="Copy Text" id="cpyFont" onclick="copyFn(event)"></i>
                             <i class="fas fa-check" id="Font_check"></i>
-                    </li>
-                    <li class=" py-3 CopyContent">
-                        <span class="text-span">
-                            😎 ` + dtext + `🌷
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            <span class="text-span">
+                                🐼` + dtext + `
 
-                        </span>
-                           <i class="fas fa-copy" title="Copy Text" onclick="copyFn2(event)"></i>
-                           <i class="fas fa-check" id="Font_check"></i>
-                    </li>
-                    <li class=" py-3 CopyContent">
-                        <span class="text-span">
-                            🌷🍔` + dtext + `
+                            </span>
+                               <i class="fas fa-copy" title="Copy Text" onclick="copyFn1(event)"></i>
+                                <i class="fas fa-check" id="Font_check"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            <span class="text-span">
+                                😎 ` + dtext + `🌷
 
-                        </span>
-                            <i class="fas fa-copy" title="Copy Text" onclick="copyFn3(event)"></i>
-                           <i class="fas fa-check" id="Font_check"></i>
-                    </li>
+                            </span>
+                               <i class="fas fa-copy" title="Copy Text" onclick="copyFn2(event)"></i>
+                               <i class="fas fa-check" id="Font_check"></i>
+                        </li>
+                        <li class=" py-3 CopyContent">
+                            <span class="text-span">
+                                🌷🍔` + dtext + `
+
+                            </span>
+                                <i class="fas fa-copy" title="Copy Text" onclick="copyFn3(event)"></i>
+                               <i class="fas fa-check" id="Font_check"></i>
+                        </li>
 
 
-                    </li>`;
+                        </li>`;
 
             // debugger
             return html;
@@ -1404,7 +1429,17 @@
         //}
         //debugger
         //var clipboard = new Clipboard(".clipboard");
+        function EditFunction() {
+            debugger
+            var text2 = document.getElementById("txtwrite").value;
+            debugger
+            if (text2 === "" || text2 === undefined) {
+                debugger
+                $('#txtdisplay').val("");
+            }
+            $('#txtdisplay').val("");
 
+        }
         var customFormatting = event => {
 
 
@@ -1467,6 +1502,15 @@
     </script>
     <script>
         AOS.init();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9HV9TE1TW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-N9HV9TE1TW');
     </script>
 </body>
 </html>

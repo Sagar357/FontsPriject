@@ -15,7 +15,7 @@
 
 
 <header class="my-4">
-    <div class="container">
+    <div style="margin:0 10px 0 10px;">
         <nav>
             <div class="logo">
                 @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
@@ -25,15 +25,17 @@
             </div>
             <div class="nav-item col-right" id="myHeader">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">service</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="@Url.Action("About" ,"Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("PrivacyPolicy","Home")">Privacy Policy</a></li>
+                    <li><a href="@Url.Action("Disclaimer","Home")">Disclaimer</a></li>
+                    <li><a href="@Url.Action("TermCondition","Home")">Term & Condition</a></li>
 
                 </ul>
             </div>
         </nav>
+    </div>
+    <div class="container">
         <div class="main-bar">
             <div class="a"></div>
             <div class="b"></div>
@@ -53,14 +55,14 @@
             <div class="banner_cont1 bnr_commmn col-12 col-sm-12 col-md-6"
                  data-aos="zoom-in" data-aos-delay="50" data-aos-duration="2000" data-aos-easing="ease-in-out">
                 <h1 class="line-1 anim-typewriter">
-                    Fancy Text Generator & Font Changer 
+                    Fancy Text Generator <br /> & Font Changer 
                     @*😎 Cool Font Generator*@
                 </h1>
                 <p>
                     Fonts for Instagram, Facebook, WhatsApp, Twitter, Snapchat, Tiktok & any other places....
                 </p>
                 <div class="search">
-                    <input type="text" id="text1" name="font" placeholder="search your font here...">
+                    <input type="text" id="text1" name="font" placeholder="search your font here..." onkeyup="myfunction()" >
                     <div class="search-item">
                         <svg width="25px" height="25px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd">
                             <path class="rui-77aaa" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path>
@@ -154,7 +156,7 @@
         <div class="Insta_content d-flex .flex-wrap row">
             <div class="Fst01 frst_cmn01">
                 <div class="F_part0 Fpart_cmn">
-                    <h2 class="py-1">Fancy Text Generator</h2>
+                   <a href="https://fancytextgenerator.io/"> <h2 class="py-1">Fancy Text Generator</h2></a>
                     <p>
                         Are you searching for a Text Fonts Generator? Then, you are now on the right page. Yes, In this article,
                         we are going to tell you the best text generator for converting your fonts. This text fonts website allows
@@ -346,7 +348,9 @@
             </div>
         </div>
         <div class="Design_font" onclick="topFunction()">
-            <a href="#" type="button" role="button"> Design Your Own Font</a>
+            <a href="#" type="button" role="button">
+                <i class="fas fa-chevron-up"></i>
+            </a>
         </div>
     </div>
     @*<input id="copyinput" style="display:none">
@@ -361,9 +365,9 @@
             <div class="Ft_cnt2 Ftr_cmn01 col-12 col-sm-6 col-md-4"
                  data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="Ft_heading">
-                    <h2>quick Links</h2>
+                    @*<h2>quick Links</h2>*@
                 </div>
-                <div class="FT_contnt">
+                @*<div class="FT_contnt">
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
@@ -371,13 +375,13 @@
                         <li><a href="#">Casino game Rules</a></li>
                         <li><a href="#">Term & Condition</a></li>
                     </ul>
-                </div>
+                </div>*@
             </div>
             <div class="Ft_cnt3 Ftr_cmn01 col-12 col-sm-6 col-md-4">
                 <div class="Ft_heading">
-                    <h2>contact Us</h2>
+                    @*<h2>contact Us</h2>*@
                 </div>
-                <div class="FT_contnt">
+                @*<div class="FT_contnt">
                     <ul>
                         <li><a href="#">Responsible gaming</a></li>
                         <li><a href="#">privacy & Security</a></li>
@@ -385,7 +389,7 @@
                         <li><a href="#">Privacy policy</a></li>
                         <li><a href="#">History of Casino Games</a></li>
                     </ul>
-                </div>
+                </div>*@
             </div>
             <div class="Ft_cnt4 Ftr_cmn01 col-12 col-sm-6 col-md-4"
                  data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">

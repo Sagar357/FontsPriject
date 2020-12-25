@@ -36,6 +36,9 @@ menu, .head-wrp, output, ruby, section, summary, time, mark, audio, video {
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Open Sans',sans-serif;
 }
+html{
+    scroll-behavior:smooth;
+}
 
 header {
   width: 100%;
@@ -160,6 +163,9 @@ header nav .nav-item ul li a {
   text-transform: capitalize;
   font-family: 'Open Sans',sans-serif;
 }
+    .banner .banner_content .banner_cont1 h1 br{
+        display:none;
+    }
 
     .banner .banner_content .banner_cont1 p {
         color: #ffffff;
@@ -442,8 +448,15 @@ header nav .nav-item ul li a {
   text-decoration: none;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  width:50px;
+  height:50px;
+  border-radius:50%;
 }
-
+    .Design_font a i.fas.fa-chevron-up {
+        font-size: 14px;
+        display: flex;
+        transform: translate(-4px, 6px);
+    }
 .Design_font a:hover {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -953,6 +966,18 @@ footer .copyright_wrapper .Copyright_content p span {
   .banner_cont1 h1 {
     font-size: 1.5rem !important;
   }
+    .banner_cont1 h1 br{
+        display:block!important;
+    }
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 11em;
+        }
+    }
 }
 /*custom fonts*/
 
@@ -973,5 +998,9 @@ footer .copyright_wrapper .Copyright_content p span {
 }
 .Font_check{
 
+}
+
+.Ft_cnt3, .Ft_cnt2{
+    display:none;
 }
 /*# sourceMappingURL=style.css.map */
