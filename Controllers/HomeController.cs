@@ -38,26 +38,26 @@ namespace FontsPriject.Controllers
         }
         public ActionResult About()
         {
-            return View("About");
+            return View("View_About");
         }
         public ActionResult Contact()
         {
-            return View();
+            return View("View_Contact");
         }
 
         public ActionResult Disclaimer()
         {
-            return View();
+            return View("View_Disclaimer");
         }
 
         public ActionResult PrivacyPolicy()
         {
-            return View();
+            return View("View_PrivacyPolicy");
         }
 
         public ActionResult TermCondition()
         {
-            return View();
+            return View("View_TermCondition");
         }
     }
     

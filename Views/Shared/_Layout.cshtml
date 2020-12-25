@@ -1243,6 +1243,9 @@
                 for (var prop in a) {
                     var jaux = {};
                     debugger
+                    if (a[prop].length - index < 0) {
+                        index = a[prop].length - 1;
+                    }
                     jaux.in = prop;
                     jaux.out = a[prop][index]
                     console.log(a[prop].length - index);
