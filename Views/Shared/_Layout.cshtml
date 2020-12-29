@@ -1234,25 +1234,27 @@
 
 
             $('li').click(function (event) {
-       
+       //debugger
                 var json = {};
                 json.in = event.currentTarget.parentElement.attributes.value.value;
                 json.out = event.currentTarget.innerText;
                 var arr = a[json.in];
                 var index = arr.indexOf(json.out);
+                //document.getElementById("txtdisplay").innerHtml=(json.out).repeat(5);
                 for (var prop in a) {
                     var jaux = {};
-                    debugger
-                    if (a[prop].length - index < 0) {
-                        index = a[prop].length - 1;
+                   // debugger
+                    if (a[prop].length - index > 0) {
+                        jaux.in = prop;
+                        jaux.out = a[prop][index]
+                        console.log(a[prop].length - index);
+                   
+                        rules[rules.length] = jaux;
+                        console.log(jaux)
                     }
-                    jaux.in = prop;
-                    jaux.out = a[prop][index]
-                    console.log(a[prop].length - index);
-                    rules[rules.length] = jaux;
+                   
                 }
                
-                console.log(rules)
             });
 
             //new ClipboardJS('.copy');
@@ -1371,13 +1373,13 @@
         function copyToClipboard(event) {
             var $temp = $("<input>");
 
-            var innerHtml = event.currentTarget.previousElementSibling.innerText;
-            $("body").append($temp);
-            $temp.val(innerHtml).select();
+           var innerHtml = event.currentTarget.previousElementSibling.innerText;
+           $("body").append($temp);
+           $temp.val(innerHtml).select();
 
-            document.execCommand("copy");
-            //alert("Contained copy");
-            //$temp.remove();
+           document.execCommand("copy");
+            alert("Contained copy");
+            $temp.remove();
         }
         function copyFn(event) {
 
@@ -1428,32 +1430,55 @@
             alert("Text Copied Paste It Anywhere");
             $("copyinput4").remove();
         }
+        //function copyFn6(event) {
+        //    debugger
+        //    var innerhtml6 = event.currentTarget.previousElementSibling.innerText;
+        //    $("body").append('<input id="copyinput5"/>');
+        //    $('#copyinput5').val(innerhtml6);
+        //    $('#copyinput5').select();
+        //    document.execCommand("copy");
+        //    alert("Text Copied Paste It anywhere");
+        //    $("copyinput5").remove();
+        //}
+        function copyFunction6() {
+            debugger
+            var copyText = document.getElementById("txtdisplay");
+            copyText.select();
+            document.execCommand("copy");
+            //var tooltip = docement.getElementById("cpyfont");
+            //tooltip.innerHtml
+            alert(" Text Copied paste It Anywhere");
+            $("txtdisplay").remove();
+        }
 
         //}
         //debugger
         //var clipboard = new Clipboard(".clipboard");
         function EditFunction() {
-            debugger
+           // debugger
             var text2 = document.getElementById("txtwrite").value;
-            debugger
+           // debugger
             if (text2 === "" || text2 === undefined) {
-                debugger
+             //   debugger
                 $('#txtdisplay').val("");
             }
-            $('#txtdisplay').val("");
-
-        }
-        var customFormatting = event => {
+          
+        
+        //var customFormatting = event => {
 
 
             var text = $('#txtwrite').val();
+            debugger
             var dtext = text;
             for (i = 0; i < rules.length; i++) {
                 var element = rules[i];
 
-                dtext = dtext.replace(element.in, element.out);
+             //   document.getElementById("txtdisplay").innerHTML = dtext.repeat((element.out).currentTarget);
+                dtext = dtext.replaceAll(element.in, element.out);
+                
 
             }
+
             $('#txtdisplay').val(dtext);
 
             $('#txtdisplay').css('font-size', '25px');

@@ -1,7 +1,81 @@
 ﻿
 @{
-    ViewBag.Title = "View_Disclaimer";
+    ViewBag.Title = "Disclaimer";
+    Layout= "~/Views/Shared/Empty_Layout.cshtml";
 }
 
-<h2>Disclaimer_Home</h2>
+<link href="~/Content/css/style.css" rel="stylesheet" />
+
+<header class="my-4 privacy_wrp">
+    <div style="margin:0 10px 0 10px;">
+        <nav>
+            <div class="logo">
+                @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
+                <a href="@Url.Action("Index","Home")">
+                    <img src="~/image/logo3.png" alt="Alternate Text" />
+                </a>
+            </div>
+            <div class="nav-item col-right" id="myHeader">
+                <ul>
+                    <li><a href="@Url.Action("About" ,"Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("PrivacyPolicy","Home")">Privacy Policy</a></li>
+                    <li><a href="@Url.Action("Disclaimer","Home")">Disclaimer</a></li>
+                    <li><a href="@Url.Action("TermCondition","Home")">Term & Condition</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="main-bar">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+        <div class="Heading_wrp row">
+            @*<div class="Inpt">
+                   <input class="pb-5 px-2 text-secondary col-12 bg-white" type="text" name="text" id="text1" placeholder="type or paste some text here">
+                </div>*@
+        </div>
+    </div>
+</header>
+
+<div class="main_content">
+    <div class="container">
+        <h2>Disclaimer for fancy text generator</h2>
+
+        <p>
+            If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at admin@fancytextgenerator.io.
+        </p>
+
+        <h2>Disclaimers for fancy text generator</h2>
+
+        <p>
+            fancy text generator does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the
+            information you find on this website (fancy text generator), is strictly at your own risk. fancy text generator will not be liable for any losses and/or damages
+            in connection with the use of our website.
+        </p>
+
+        <p>
+            From our website, you can visit other websites by following hyperlinks to such external sites.
+            While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites.
+            These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without
+            notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.
+        </p>
+
+        <p>
+            Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control.
+            Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.
+        </p>
+
+        <h2>Consent</h2>
+
+        <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+        <h2>Update</h2>
+
+        <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+        </div>
+    </div>
 

@@ -2,6 +2,45 @@
 @{
     ViewBag.Title = "View_About";
 }
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<header class="my-4 privacy_wrp">
+    <div style="margin:0 10px 0 10px;">
+        <nav>
+            <div class="logo">
+                @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
+                <a href="@Url.Action("Index","Home")">
+                    <img src="~/image/logo3.png" alt="Alternate Text" />
+                </a>
+            </div>
+            <div class="nav-item col-right" id="myHeader">
+                <ul>
+                    <li><a href="@Url.Action("About" ,"Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("PrivacyPolicy","Home")">Privacy Policy</a></li>
+                    <li><a href="@Url.Action("Disclaimer","Home")">Disclaimer</a></li>
+                    <li><a href="@Url.Action("TermCondition","Home")">Term & Condition</a></li>
 
-<h2>View_About</h2>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="main-bar">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+        <div class="Heading_wrp row">
+            @*<div class="Inpt">
+                   <input class="pb-5 px-2 text-secondary col-12 bg-white" type="text" name="text" id="text1" placeholder="type or paste some text here">
+                </div>*@
+        </div>
+    </div>
+</header>
 
+<div class="main_content">
+    <div class="container">
+        <h2>View_About</h2>
+
+    </div>
+</div>

@@ -45,8 +45,24 @@ ul li:hover {
         justify-content: space-around;
         align-items: center;
         margin: 1rem 0 0 0;
+        position:relative;
     }
- .child-textarea input {
+    .child-textarea .copy-wrp {
+        position: absolute;
+        right: 16px;
+        bottom: 9px;
+        transition: all .3s ease-in-out;
+        cursor:pointer;
+    }
+        .child-textarea .copy-wrp i{
+            display:block!important;
+        }
+        .child-textarea .copy-wrp:hover {
+            opacity: .77;
+            transition: all .3s ease-in-out;
+            transform: scale(1.1);
+        }
+        .child-textarea input {
             width: 49%;
             padding: 1rem 0 8rem 14px;
             border-radius: 5px;
@@ -107,15 +123,18 @@ ul li:hover {
                 <input id="txtdisplay" placeholder="  And the output will appear here...">
 
                 </input>
+                <div class="copy-wrp">
+                    <i class="fas fa-copy" title="Copy Text" onclick="copyFunction6()"></i>
+                </div>
             </div>
 
         </div>
 
         <div class="gnrt_random ">
-            <div class="child_random">
-                <p>You can edit this font by changing the subsitutions rules below. There are suggested characters, but you can also edit the rules manually by clicking the input or output character. There's a save button below the rules so you can save your font with a unique URL. Clicking the button below will replace all the existing letter-substitution rules (seen below) with random ones. Have fun!</p>
-                <button onclick="customFormatting(event)">Custom Font</button>
-            </div>
+            <!--<div class="child_random">-->
+                @*<p>You can edit this font by changing the subsitutions rules below. There are suggested characters, but you can also edit the rules manually by clicking the input or output character. There's a save button below the rules so you can save your font with a unique URL. Clicking the button below will replace all the existing letter-substitution rules (seen below) with random ones. Have fun!</p>
+                <button onclick="customFormatting(event)">Custom Font</button>*@
+            <!--</div>-->
         </div>
 
         <div class="list_container">
