@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml;
 
 namespace FontsPriject.Controllers
 {
@@ -45,6 +46,21 @@ namespace FontsPriject.Controllers
             return View("View_Contact");
         }
 
+ 
+        public ActionResult SubmitContact(FontContact contact)
+        {
+            try
+            {
+           
+                service.ContactUs(contact);
+                return View("View_Contact");
+            }
+            catch
+            {
+                return View("View_Contact");
+            }
+
+        }
         public ActionResult Disclaimer()
         {
             return View("View_Disclaimer");
@@ -58,6 +74,28 @@ namespace FontsPriject.Controllers
         public ActionResult TermCondition()
         {
             return View("View_TermCondition");
+        }
+
+        public ActionResult SiteMap()
+        {
+            return View("SiteMap");
+        }
+
+        public ActionResult SubmitMap(Sitemap_Model site)
+        {
+            XmlDocument doc = new XmlDocument();
+            List<Sitemap_Model> fieldList = new List<Sitemap_Model>();
+            doc.Load(Server.MapPath("sitemap.xml"));
+            foreach (XmlNode node in doc.SelectNodes("/urlset/url"))
+            {
+                fieldList.Add(new Sitemap_Model
+                {
+                    Url = node["loc"].InnerText,
+                    ModifiedDate = node["lastmod"].InnerText,
+                    Priority = node["priority"].InnerText
+                });
+            }
+            return View("SiteMap");
         }
     }
     

@@ -1,0 +1,164 @@
+﻿
+
+@{
+    ViewBag.Title = "SiteMap";
+}
+@using FontsPriject.Models
+@model FontsPriject.Models.Sitemap_List
+
+@{
+    ViewBag.MetaKeywords = "Fancy Text, Fancy Fonts, Fancy Text Generator, Stylish Text, Cool Text";
+    ViewBag.MetaDescription = "(A fancy cool ✅ Text generator that helps create stylish text font styles with beautiful symbols and fancy characters for social networks & any other places. Fancy Text Generator Make 𝐔𝐧𝐢𝐪𝐮𝐞 & 𝔽𝕒𝕟𝕔𝕪 font style including roman, greek, cursive letters & many other fancy fonts.)";
+    ViewBag.Title = "Fancy Text Generator & Font Changer 😎 Cool Font Generator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<header class="my-4 privacy_wrp">
+    <div style="margin:0 10px 0 10px;">
+        <nav>
+            <div class="logo">
+                @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
+                <a href="@Url.Action("Index","Home")">
+                    <img src="~/image/logo3.png" alt="Alternate Text" />
+                </a>
+            </div>
+            <div class="nav-item col-right" id="myHeader">
+                <ul>
+                    <li><a href="@Url.Action("About" ,"Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("PrivacyPolicy","Home")">Privacy Policy</a></li>
+                    <li><a href="@Url.Action("Disclaimer","Home")">Disclaimer</a></li>
+                    <li><a href="@Url.Action("TermCondition","Home")">Term & Condition</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="main-bar">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+        <div class="Heading_wrp row">
+            @*<div class="Inpt">
+                   <input class="pb-5 px-2 text-secondary col-12 bg-white" type="text" name="text" id="text1" placeholder="type or paste some text here">
+                </div>*@
+        </div>
+    </div>
+</header>
+@*<div class="main_content">
+    <div class="container">
+
+        <br />
+        <br />
+        <br />*@
+
+<section class="Sitemap-section mb-4">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-white display-4 font-weight-bold">fancytextgenerator Sitemap</h1>
+        </div>
+    </div>
+</section>
+
+<section class="sitemap-categories-section my-5">
+    <div class="container">
+        <h4 class="mb-3">Main Link</h4>
+
+        <ul>
+            @foreach (var item in Model.list)
+            {
+                <li>
+                    <a href="@item.Url" target="_blank" class="category-link">Home<i class="fas fa-paper-plane font12 ml-2"></i></a>
+                </li>
+            }
+            <li>
+                <a href="https://fancytextgenerator.io/" target="_blank" class="category-link">Home<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+            <li>
+                <a href="https://fancytextgenerator.io/" target="_blank" class="category-link">About Us<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+            <li>
+                <a href="https://fancytextgenerator.io/Home/Contact" target="_blank" class="category-link">Contact Us<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+            <li>
+                <a href="https://fancytextgenerator.io/Home/TermCondition" target="_blank" class="category-link">Terms & Conditions<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+            <li>
+                <a href="https://fancytextgenerator.io/Home/PrivacyPolicy" target="_blank" class="category-link">Priacy Policy<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+            <li>
+                <a href="https://fancytextgenerator.io/Home/Disclaimer" target="_blank" class="category-link">Disclaimer<i class="fas fa-paper-plane font12 ml-2"></i></a>
+            </li>
+        </ul>
+        <br />
+        <h4 class="mb-3">Fancy Text Generator Link</h4>
+
+        <table class="table table-responsive" style="font-size:12px;">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Link
+                    </th>
+                    <th>
+                        Date
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Random Font Generator
+                    </td>
+                    <td>
+                        <a href="https://fancytextgenerator.io/" target="_blank" title="Fancy Text Generator  web link">
+                            https://fancytextgenerator.io/
+                        </a>
+                    </td>
+                    <td>
+                        30-12-2020
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Random Font Generator
+                    </td>
+                    <td>
+                        <a href="https://fancytextgenerator.io/Home/CustomFonts" target="_blank" title="Fancy Text Generator  web link">
+                            https://fancytextgenerator.io/Home/CustomFonts
+                        </a>
+                    </td>
+                    <td>
+                        30-12-2020
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</section>
+@*</div>
+    </div>*@
+
+
+
+
+
+
+

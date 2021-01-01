@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "View_Contact";
 }
+@using FontsPriject.Models
+@model FontsPriject.Models.FontContact
 
 <link href="~/Content/css/style.css" rel="stylesheet" />
 
@@ -39,15 +41,101 @@
         </div>
     </div>
 </header>
+<form action="@Url.Action("SubmitContact" ,"Home" )"  method="post">
+    <div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Customer Enquiry Form</p>
+            </div>
 
-<div class="main_content">
-    <div class="container">
-
-
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name" class="form-control1">Customer name</label>
+                            <input type="text" class="form-control" name="CustomerName" placeholder="Your Name *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile" class="form-control1">Mobile Number</label>
+                            <input type="text" class="form-control" name="CustomerMobile" id="text1" placeholder="Your Phone Number *" value="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="message" class="form-control1">Message</label>
+                            <input type="text" class="form-control" name="CustomerMessage" placeholder="Enter Your Message *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-control1">Email address </label>
+                            <input type="text" class="form-control" name="CustomerEmail" id="text2" placeholder="Enter Your Email *" value="" />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btnSubmit" @*onclick="inputtxt(event)"*@>Submit</button>
+            </div>
         </div>
     </div>
+</form>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="main_content">
+    <div class="container">
+        <h2>Customer Enquiry Form</h2>-->
+@* @using (Html.BeginForm("View_Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+
+<!--<div class="form-group">
+        <label for="name">Customer Name <input type="name" class="form-group" id="name" placeholder="Enter Customer Name" /></label>
+      </div>
+<div class="form-group1">
+    <label for="mobile">Mobile Number<input type="mobile" class="form-group1" id="mobile" placeholder="Enter Mobile Number" /></label>
+</div>
+<div class="form-group2">
+    <label for="mesage">Enter Message<input type="message" class="form-group2" id="message" placeholder="Enter Message" /></label>
+</div>
+<div class="form-group3">
+    <label for="email">Enter valid Email<input type="email" class="form-group3" id="email" placeholder="Enter Email Address" /></label>
+    <button type="submitt" id="submit">Submitt</button>
+</div>
+</div>
+</div>-->

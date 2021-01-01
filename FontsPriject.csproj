@@ -130,6 +130,7 @@
     <Compile Include="utils\ConnectionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Start\sitemap.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1889,6 +1890,8 @@
     <Content Include="fonts\Choplin-Medium-DEMO.woff" />
     <Content Include="fonts\Choplin-Medium-DEMO.woff2" />
     <Content Include="Views\Shared\Empty_Layout.cshtml" />
+    <Content Include=".editorconfig" />
+    <Content Include="Font.sitemap" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1922,6 +1925,7 @@
     <Content Include="Views\Home\View_TermCondition.cshtml" />
     <Content Include="Views\Home\View_About.cshtml" />
     <Content Include="Views\Home\View_Contact.cshtml" />
+    <Content Include="Views\Home\SiteMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
