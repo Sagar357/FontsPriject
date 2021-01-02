@@ -76,27 +76,27 @@ namespace FontsPriject.Controllers
             return View("View_TermCondition");
         }
 
-        public ActionResult SiteMap()
-        {
-            return View("SiteMap");
-        }
+        //public ActionResult SiteMap()
+        //{
+        //    return View("SiteMap");
+        //}
 
-        public ActionResult SubmitMap(Sitemap_Model site)
-        {
-            XmlDocument doc = new XmlDocument();
-            List<Sitemap_Model> fieldList = new List<Sitemap_Model>();
-            doc.Load(Server.MapPath("sitemap.xml"));
-            foreach (XmlNode node in doc.SelectNodes("/urlset/url"))
-            {
-                fieldList.Add(new Sitemap_Model
-                {
-                    Url = node["loc"].InnerText,
-                    ModifiedDate = node["lastmod"].InnerText,
-                    Priority = node["priority"].InnerText
-                });
-            }
-            return View("SiteMap");
-        }
+        //public ActionResult SubmitMap(Sitemap_Model site)
+        //{
+        //    XmlDocument doc = new XmlDocument();
+        //    List<Sitemap_Model> fieldList = new List<Sitemap_Model>();
+        //    doc.Load(Server.MapPath("sitemap.xml"));
+        //    foreach (XmlNode node in doc.SelectNodes("/urlset/url"))
+        //    {
+        //        fieldList.Add(new Sitemap_Model
+        //        {
+        //            Url = node["loc"].InnerText,
+        //            ModifiedDate = node["lastmod"].InnerText,
+        //            Priority = node["priority"].InnerText
+        //        });
+        //    }
+        //    return View("SiteMap");
+        //}
     }
     
 

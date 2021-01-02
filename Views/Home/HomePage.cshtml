@@ -2,16 +2,56 @@
 
 @{
     ViewBag.Title = "Home Page";
+   // Layout = "~/Views/Shared/Empty_Layout.cshtml";
 }
+
 @using FontsPriject.Models
+
+<!--<header class="my-4 privacy_wrp">
+    <div style="margin:0 10px 0 10px;">
+        <nav>
+            <div class="logo">-->
+                @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
+                <!--<a href="@Url.Action("Index","Home")">
+                    <img src="~/image/logo3.png" alt="Alternate Text" />
+                </a>
+            </div>
+            <div class="nav-item col-right" id="myHeader">
+                <ul>
+                    <li><a href="@Url.Action("About" ,"Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
+                    <li><a href="@Url.Action("PrivacyPolicy","Home")">Privacy Policy</a></li>
+                    <li><a href="@Url.Action("Disclaimer","Home")">Disclaimer</a></li>
+                    <li><a href="@Url.Action("TermCondition","Home")">Term & Condition</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="main-bar">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+        <div class="Heading_wrp row">-->
+            @*<div class="Inpt">
+                   <input class="pb-5 px-2 text-secondary col-12 bg-white" type="text" name="text" id="text1" placeholder="type or paste some text here">
+                </div>*@
+        <!--</div>
+    </div>
+</header>-->
+
 <style>
     body {
         background: #efefef;
     }
+
     .Site_wrp {
         margin: 0 4rem;
     }
- ul {
+
+    ul {
         display: flex;
         justify-content: space-around;
         margin: 2rem 0 2rem;
@@ -20,7 +60,7 @@
         flex-wrap: wrap;
     }
 
- ul li {
+        ul li {
             list-style-type: none;
             border: 1px solid #000000;
             border-radius: 6px;
@@ -28,40 +68,47 @@
             margin: 5px;
             transition: .3s all ease-in-out;
         }
-ul li:hover {
+
+            ul li:hover {
                 opacity: .77;
                 background: #555;
                 cursor: pointer;
                 transition: .3s all ease-in-out;
                 color: #fff;
             }
- .textarea_wrp {
+
+    .textarea_wrp {
         width: 100%;
     }
-.child-textarea {
+
+    .child-textarea {
         width: %;
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin: 1rem 0 0 0;
-        position:relative;
+        position: relative;
     }
-    .child-textarea .copy-wrp {
-        position: absolute;
-        right: 16px;
-        bottom: 9px;
-        transition: all .3s ease-in-out;
-        cursor:pointer;
-    }
-        .child-textarea .copy-wrp i{
-            display:block!important;
-        }
-        .child-textarea .copy-wrp:hover {
-            opacity: .77;
+
+        .child-textarea .copy-wrp {
+            position: absolute;
+            right: 16px;
+            bottom: 9px;
             transition: all .3s ease-in-out;
-            transform: scale(1.1);
+            cursor: pointer;
         }
+
+            .child-textarea .copy-wrp i {
+                display: block !important;
+            }
+
+            .child-textarea .copy-wrp:hover {
+                opacity: .77;
+                transition: all .3s ease-in-out;
+                transform: scale(1.1);
+            }
+
         .child-textarea input {
             width: 49%;
             padding: 1rem 0 8rem 14px;
@@ -69,10 +116,12 @@ ul li:hover {
             /* height: 224px; */
             border: 1px solid #999;
         }
- .gnrt_random {
+
+    .gnrt_random {
         width: 100%;
     }
-.child_random {
+
+    .child_random {
         width: 55%;
         background: #fff;
         padding: 1rem;
@@ -80,13 +129,15 @@ ul li:hover {
         border-radius: 5px;
         text-align: center;
     }
- .child_random > p {
+
+        .child_random > p {
             text-transform: capitalize;
             color: #000;
             line-height: 1.5;
             text-align: left !important;
         }
- .child_random button {
+
+        .child_random button {
             width: 50%;
             padding: .8rem 0;
             text-align: center;
@@ -96,10 +147,12 @@ ul li:hover {
             margin: 1rem 0 0;
             color: #000;
         }
-            Site_wrp .child_random button:hover {
-                opacity: .77;
-                transition: all .3s ease-in-out;
-            }
+
+    Site_wrp .child_random button:hover {
+        opacity: .77;
+        transition: all .3s ease-in-out;
+    }
+
     .grid_btn01 {
         padding: .3rem;
         margin: .3rem;
@@ -108,37 +161,69 @@ ul li:hover {
         border-radius: 4px;
         transition: all .3s ease-in-out;
     }
+
         .grid_btn01:hover {
             transition: all .3s ease-in-out;
             background: #fff;
             box-shadow: 0 0 2px 0 #333;
         }
+    /*.new{
+            position:absolute;
+            top:10px;
+            left:10px;
+            
+            max-width:20%;
+        }*/
+       /* .logo5 img{
+           max-width:40%;
+        }*/
 </style>
-<div class="Site_wrp">
-        <div class="textarea_wrp">
-            <div class="child-textarea">
-                <input id="txtwrite" placeholder=" Type some text here..." onkeyup="EditFunction()">
 
-                </input>
-                <input id="txtdisplay" placeholder="  And the output will appear here...">
 
-                </input>
-                <div class="copy-wrp">
-                    <i class="fas fa-copy" title="Copy Text" onclick="copyFunction6()"></i>
+
+
+
+
+@*<div class="main_content">
+    <div class="container">*@
+
+        <div class="Site_wrp">
+            <div class="textarea_wrp">
+                <div class="child-textarea">
+                    <input id="txtwrite" placeholder=" Type some text here..." onkeyup="EditFunction()">
+
+                    </input>
+                    <input id="txtdisplay" placeholder="  And the output will appear here...">
+
+                    </input>
+                    <div class="copy-wrp">
+                        <i class="fas fa-copy" title="Copy Text" onclick="copyFunction6()"></i>
+                    </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="gnrt_random ">
-            <!--<div class="child_random">-->
+            <div class="gnrt_random ">
+                <!--<div class="child_random">-->
                 @*<p>You can edit this font by changing the subsitutions rules below. There are suggested characters, but you can also edit the rules manually by clicking the input or output character. There's a save button below the rules so you can save your font with a unique URL. Clicking the button below will replace all the existing letter-substitution rules (seen below) with random ones. Have fun!</p>
-                <button onclick="customFormatting(event)">Custom Font</button>*@
-            <!--</div>-->
+                    <button onclick="customFormatting(event)">Custom Font</button>*@
+                <!--</div>-->
+            </div>
+
+            <div class="list_container">
+
+
+            @*</div>
+            <div class="new">
+                <span>Back To Home</span>
+
+            </div>*@
+            <!--<div class="logo5">-->
+            @*<h2>Fancy Text <br /><span>Generator</span></h2>*@
+            <!--<a href="@Url.Action("Index","Home")">
+                    <img src="~/image/logo3.png" alt="Alternate Text" />
+                </a>
+            </div>-->
         </div>
-
-        <div class="list_container">
-
-
-        </div>
-   </div>
+        @*</div>
+            </div>*@

@@ -95,21 +95,21 @@ namespace FontsPriject.Services
             return (status);
         }
 
-        public string FontSite(sitemap site)
-        {
-            string status = string.Empty;
-            try
-            {
+        //public string FontSite(sitemap site)
+        //{
+        //    string status = string.Empty;
+        //    try
+        //    {
                 
-                status = "success";
-            }
+        //        status = "success";
+        //    }
 
-            catch (Exception ex)
-            {
-                status = ex.Message;
-            }
-            return (status);
+        //    catch (Exception ex)
+        //    {
+        //        status = ex.Message;
+        //    }
+        //    return (status);
 
-        }
+        //}
     }
 }

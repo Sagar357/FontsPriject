@@ -35,23 +35,23 @@ namespace FontsPriject.Models
 
     }
 
-    public class Sitemap_Model
-    {
-        public string Url { get; set; }
-        public string ModifiedDate { get; set; }
-        public string Priority { get; set; }
+    //public class Sitemap_Model
+    //{
+    //    public string Url { get; set; }
+    //    public string ModifiedDate { get; set; }
+    //    public string Priority { get; set; }
 
-    }
+    //}
 
-    public class Sitemap_List
-    {
-        public Sitemap_List()
-        {
-            this.list = new List<Sitemap_Model>();
-        }
-        public List<Sitemap_Model> list { get; set; }
+    //public class Sitemap_List
+    //{
+    //    public Sitemap_List()
+    //    {
+    //        this.list = new List<Sitemap_Model>();
+    //    }
+    //    public List<Sitemap_Model> list { get; set; }
 
-    }
+    //}
 }
 
        /* public class Font_Size()
