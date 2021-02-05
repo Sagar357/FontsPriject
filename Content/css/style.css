@@ -33,7 +33,7 @@ menu, .head-wrp, output, ruby, section, summary, time, mark, audio, video {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, li, a {
   font-family: 'Open Sans',sans-serif;
 }
 html{
@@ -368,11 +368,16 @@ header nav .nav-item ul li a {
           justify-content: space-between;
 }
 
-    .Insta_font_wrp .Insta_content .frst_cmn01 h2, .frst_cmn01 h3 {
+    .Insta_font_wrp .Insta_content .frst_cmn01 h2 {
         font-size: 2rem;
         font-weight: bold;
         padding: 1rem 0;
     }
+.frst_cmn01 h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
     .Insta_font_wrp .Insta_content .frst_cmn01 ul {
         padding-left: 2.2rem;
     }
