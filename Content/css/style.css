@@ -1,3 +1,12 @@
+/*
+    Author:Prem Sharma,
+    Aim: Common Style  Sheet,
+    change log:code ,developer name ,task description ,date
+    =============================================================================================================
+    #CC01 ,Himanshu Tiwari ,change font family and h3 styling as per recomended by SEO Team (Mr Mohit) ,05-Feb-2021
+*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -32,10 +41,11 @@ menu, .head-wrp, output, ruby, section, summary, time, mark, audio, video {
   width: 1200px;
   margin: 0 auto;
 }
-
+/*#CC01  started*/
 h1, h2, h3, h4, h5, h6, p, li, a {
   font-family: 'Open Sans',sans-serif;
 }
+/*#CC01  end*/
 html{
     scroll-behavior:smooth;
 }
@@ -340,9 +350,11 @@ header nav .nav-item ul li a {
           justify-content: space-between;
 }
 
+/*#CC01  started*/
 .Insta_font_wrp .Insta_content .Fst01 h2 {
   font-size: 2.5rem !important;
 }
+/*#CC01  end*/
 
 .Insta_font_wrp .Insta_content .Fst02, .Insta_font_wrp .Insta_content .Fst04 {
   -webkit-box-orient: horizontal;
@@ -373,11 +385,15 @@ header nav .nav-item ul li a {
         font-weight: bold;
         padding: 1rem 0;
     }
+
+/*#CC01  started*/
 .frst_cmn01 h3 {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem 0;
 }
+/*#CC01  end*/
+
     .Insta_font_wrp .Insta_content .frst_cmn01 ul {
         padding-left: 2.2rem;
     }
